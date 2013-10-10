@@ -39,6 +39,9 @@
 */
 
 $route['default_controller'] = "happy";
+
+$route['admin'] = "manage/admin";
+$route['admin/(:any)'] = "manage/admin/$1";
 $route['404_override'] = '';
 
 

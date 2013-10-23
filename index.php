@@ -1,5 +1,5 @@
 <?php
-
+include "config/db.inc.php";
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -72,8 +72,10 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = 'application';
-
+	
+	//$application_folder = 'application';
+	$HOST = $_SERVER['HTTP_HOST'];
+	$application_folder = str_replace('www.','',$HOST).'.net/application';
 /*
  * --------------------------------------------------------------------
  * DEFAULT CONTROLLER
